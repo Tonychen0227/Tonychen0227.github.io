@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Tony Chen's website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" href="Kappa.jpeg">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script>
+    $(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+   if (this.hash !== "") {
+
+    // Prevent default anchor click behavi  or
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+    } // End if
+  });
+  })
+  </script>
+
+  <script src="JS/typed.js" type="text/javascript"></script>
+
+
+
+  <style>
+    .jumbotron { 
+      background-color: #4ee8c9; /* Purpluuuu */
+      color: #ffffff;
+      padding: 100px 25px;
+    }
+
+    .container-fluid {
+      padding: 50px 50px;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+
+    .logo {
+      color: #4ee8c9;
+      font-size: 200px;
+    }
+
+    .logo-small {
+      color: #4ee8c9;
+      font-size: 50px;
+    }
+
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .thumbnail img {
+      width: 50%;
+      height: 50%;
+      margin-bottom: 10px;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      background-color: #4ee8c9;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+    }
+
+    .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+    }
+
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #4ee8c9 !important;
+      background-color: #fff !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #4ee8c9;
+    }
+
+    .button {border-radius: 4px;
+      cursor: pointer;
+      border:1px solid #000000;
+      padding: 4px;}
+
+    p {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    li {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    li {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    h1 {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    h1.myname {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 80px;
+    }
+
+    h2 {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    h3 {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    h4 {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    h5 {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    h6 {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    img {
+    padding: 20px;
+    }
+
+    img.white {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    }
+
+    h4.heading {
+      padding-left: 200px;
+      padding-right: 200px;
+      line-height: normal;
+    }
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#programming">PROGRAMMING</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <body>
+      <div class="jumbotron text-center">
+        <h1 class="myname">Tony Chen</h1> 
+        <p>Passionate Business and Computer Science Student</p> 
+      </div>
+    </body>
+
+    <div id="about" class="container-fluid text-center">
+      <div class="row">
+        <h2>About Me</h2>
+          <h4 class="heading">Hi everyone! My name is Tony Chen and this is my personal website. I am a fourth year Business and Computer Science student at the University of British Columbia.</h4>
+
+          <h4 class="heading"> Here you will find my projects, experiences, and other fun things I have made that involves code! My other passions include competitive video games, eating food, and discovering fun things to learn about.</h4>
+
+          <h4 class="heading"> I am currently working at Paragon Testing Enterprises for Co-op until April 2019.</h4> 
+      </div>
+    </div>
+
+    <div id="programming" class="container-fluid text-center bg-grey">
+      <h2>Programming</h2>
+      <h4>* = learning</h4>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <span class="glyphicon glyphicon-screenshot logo-small"></span>
+          <h4>Programming</h4>
+          <p>Java, C++, TypeScript, Python, SQL</p>
+          <p> C#*, ASP.NET*, Swift*, NativeScript*</p>
+        </div>
+        <div class="col-sm-6">
+          <span class="glyphicon glyphicon-lock logo-small"></span>
+          <h4>Tools/Environment</h4>
+          <p>Git, Command Line, IntelliJ, Visual Studio, phpStorm, pyCharm</p>
+          <p>phpMyAdmin, MongoDB, Pandas</p>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6">
+          <span class="glyphicon glyphicon-send logo-small"></span>
+          <h4>Testing</h4>
+          <p>Selenium, SpecFlow, NUnit, JUnit, Chai</p>
+        </div>
+        <div class="col-sm-6">
+          <span class="glyphicon glyphicon-globe logo-small"></span>
+          <h4>Web</h4>
+          <p>Node.js, JQuery, Javascript, HTML/CSS, Bootstrap</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="container-fluid text-center">
+      <h2>My Projects</h2>
+      <h4> <b> Personal Projects </b> </h4>
+      <div class="row text-center">
+      <div class="col-sm-2">
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="BettingScript.png" alt="Chrome Script" style="width:400px;height:200px;">
+            <h4>Chrome Script for CS:GO Betting (obsolete)</h4>
+            <p>Driven by my passion for CS:GO and Coding, I made a script investigating the workings of betting sites, with a predictive algorithm. </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="Lumohacks.jpg" alt="Lumohacks Project" style="width:400px;height:200px;">
+            <h4>Message Board for First Responders and Veterans</h4>
+            <p>At Lumohacks 2018, we tackled the challenge of sending virtual messages to first responders and veterans to improve their mental well being.</p>
+          </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+      </div>
+      <h4><b>Academic Projects</b></h4>
+      <div class="row text-center">
+      <div class="col-sm-2">
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="database.png" alt="Databse Excerpt" style="width:400px;height:200px;">
+            <h4>phpMyAdmin Database on XAMPP</h4>
+            <p>In my databases course, we designed a conceptual sports team database, containing information on all the teams, players, and matches. The system would also handle SQL queries and was hosted on XAMPP using phpMyAdmin.</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="CPSC310.png" alt="Database & Query System" style="width:400px;height:200px;">
+            <h4>Typescript Dataset and Query System</h4>
+            <p>In my software engineering course, we were tasked with making a Typescript database set to handle JSON queries for a stored set of courses and rooms at UBC. We also illustrated UML diagrams and implemented them in our system.</p>
+          </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+      </div>
+    </div>
+
+    <div id="experience" class="container-fluid text-center bg-grey">
+      <h2>Experience</h2>
+      <h4>Volunteer/Work</h4>
+      <br>
+      <div class="row">
+      	<div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img class="white" src="Paragon.png" alt="Paragon Testing Enterprises" style="width:300px;height:200px;">
+            <h4>Junior Software Development and QA Intern</h4>
+            <h6>Paragon Testing Enterprises - Vancouver</h6>
+            <p>Writing Selenium and SpecFlow scripts and test cases, which I get feedback from daily scrum meetings. I am also doing full-stack web development with ASP.NET, TypeScript and C#.</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img class="white" src="Westpeak.png" alt="Westpeak Research Association" style="width:300px;height:200px;">
+            <h4>Westpeak Research Association - Analyst</h4>
+            <p>Wrote a financial research report on the company HWD.TO learning with a team of Sauder student analysts. <br> <a href="https://seekingalpha.com/article/4056337-hardwoods-distribution-branching" target="_blank">Report on Seeking Alpha. </a> </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="eSports.png" alt="UBC eSports Association" style="width:400px;height:200px;">
+            <h4>UBC eSports Association - Executive</h4>
+            <p>Helped host and run brackets during the largest Smash Bros. Tournament in the Pacific Northwest.<br> <a href="https://www.ssbwiki.com/Tournament:Battle_of_BC_2" target="_blank">Learn More</a>.</p>
+          </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="saveonfoods.jpg" alt="Save-On Foods" style="width:400px;height:200px;">
+            <h4>UBC Save-on-Foods - General Clerk</h4>
+            <p>Worked as a General Clerk at the UBC Location, tasked with closing departments and stocking shelves as needed.</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="CMP.png" alt="Commerce Mentorship Program" style="width:400px;height:200px;">
+            <h4>Commerce Mentorship Program - Tutor</h4>
+            <p>Designed and taught COMM 290 review sessions. <br><a href="https://www.facebook.com/events/1695977187396683/" target="_blank">2016W Midterm</a> <a href="https://www.facebook.com/events/554199758112702/" target="_blank">2016W Final</a> <a href="https://www.facebook.com/events/1969729353352202/" target="_blank">2017W Midterm</a> <a href="https://www.facebook.com/events/135748710464323/" target="_blank">2017W Final</a></p>
+          </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="container-footer text-center">
+      <div id="contact" class="container-fluid text-center">
+        <h2>Find me on...</h2>
+        <div class="row text-center">
+          <div class="col-sm-3">
+            <div>
+             <a href="#contact" target="_blank">
+              <img class="button" src="instagram.png" alt="" style="width:50px;height:50px;">
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div>
+           <a href="https://www.linkedin.com/in/tonychenubc/" target="_blank">
+            <img class="button" src="linkedin.png" alt="" style="width:50px;height:50px;">
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div>
+         <a href="#contact">
+          <img class="button" src="twitter.png" alt="" style="width:50px;height:50px;">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="col-sm-3">
+        <div>
+         <a href="mailto:tony.chen@alumni.ubc.ca">
+          <img class="button" src="email.png" alt="" style="width:50px;height:50px;">
+        </a>
+      </div>
+    </div>
+  </div>
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+
+  <p>&copy; 2018 Tony Chen<p>
+  </footer>
+
+</body>
+</html>
