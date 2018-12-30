@@ -1,0 +1,122 @@
+.jumbotron {
+  background-color: #0099cc; /* Purpluuuu */
+  color: #ffffff;
+  padding: 100px 25px;
+}
+
+.container-fluid {
+  padding: 50px 50px;
+}
+
+.bg-grey {
+  background-color: #f6f6f6;
+}
+
+
+.logo {
+  color: #0099cc;
+  font-size: 200px;
+}
+
+.logo-small {
+  color: #0099cc;
+  font-size: 50px;
+}
+
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  background-color: #0099cc;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #0099cc !important;
+  background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #0099cc;
+}
+
+.button {border-radius: 4px;
+  cursor: pointer;
+  border:1px solid #000000;
+  padding: 4px;}
+
+p {
+font-family: 'Open Sans', sans-serif;
+}
+
+li {
+font-family: 'Open Sans', sans-serif;
+}
+
+li {
+font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+font-family: 'Open Sans', sans-serif;
+}
+
+h1.myname {
+font-family: 'Ubuntu', sans-serif;
+font-size: 80px;
+}
+
+h2 {
+font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+font-family: 'Open Sans', sans-serif;
+}
+
+h4 {
+font-family: 'Open Sans', sans-serif;
+}
+
+h5 {
+font-family: 'Open Sans', sans-serif;
+}
+
+h6 {
+font-family: 'Open Sans', sans-serif;
+}
+
+img {
+padding: 20px;
+}
+
+img.white {
+-webkit-filter: invert(1);
+filter: invert(1);
+}
+
+h4.heading {
+  padding-left: 200px;
+  padding-right: 200px;
+  line-height: normal;
+}
