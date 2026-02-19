@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ark Nova Guide - Tony Chen's Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Thumbnail.png">
+    <style>
+        body {
+            padding-top: 70px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .markdown-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .markdown-content h1 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .markdown-content h2 {
+            margin-top: 25px;
+            color: #333;
+        }
+        .markdown-content h3 {
+            margin-top: 20px;
+            color: #555;
+        }
+        .markdown-content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .markdown-content code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .markdown-content pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #ddd;
+            padding-left: 20px;
+            margin-left: 0;
+            color: #666;
+        }
+        .back-link {
+            margin: 20px 0;
+        }
+        .download-btn {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Tony Chen</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="index.html#programming">PROGRAMMING</a></li>
+                    <li><a href="index.html#projects">PROJECTS</a></li>
+                    <li><a href="index.html#experience">EXPERIENCE</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div    <button id="download-btn" class="btn btn-primary btn-sm download-btn">
+                <span class="glyphicon glyphicon-download-alt"></span> Download Markdown
+            </button>
+         class="container">
+        <div class="back-link">
+            <a href="index.html">&larr; Back to Home</a>
+        </div>
+        <div id="markdown-content" class="markdown-content">
+            Loading...
+        </div>
+    </div>
+let markdownText = '';
+        
+        // Fetch and render the markdown file
+        fetch('NimoacDocument/1.md')
+            .then(response => response.text())
+            .then(text => {
+                markdownText = text;
+                // Configure marked options
+                marked.setOptions({
+                    breaks: true,
+                    gfm: true
+                });
+                // Render the markdown
+                document.getElementById('markdown-content').innerHTML = marked.parse(text);
+            })
+            .catch(error => {
+                document.getElementById('markdown-content').innerHTML = 
+                    '<p>Error loading content. Please make sure the markdown file exists.</p>';
+                console.error('Error loading markdown:', error);
+            });
+        
+        // Download button functionality
+        document.getElementById('download-btn').addEventListener('click', function() {
+            if (!markdownText) {
+                alert('Please wait for the content to load.');
+                return;
+            }
+            
+            const blob = new Blob([markdownText], { type: 'text/markdown' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'ark-nova-guide.md';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+            document.getElementById('markdown-content').innerHTML = 
+                    '<p>Error loading content. Please make sure the markdown file exists.</p>';
+                console.error('Error loading markdown:', error);
+            });
+    </script>
+</body>
+</html>
